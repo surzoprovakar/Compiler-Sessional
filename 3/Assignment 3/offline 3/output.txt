@@ -1,0 +1,301 @@
+
+
+type_specifier: INT
+
+
+declaration_list: ID LTHIRD CONST_INT RTHIRD
+a
+
+
+declaration_list: declaration_list COMMA ID
+c
+
+
+declaration_list: declaration_list COMMA ID
+i
+
+
+declaration_list: declaration_list COMMA ID
+j
+
+
+var_declaration: type_specifier declaration_list SEMICOLON
+
+
+type_specifier: FLOAT
+
+
+declaration_list: ID
+c
+****error at line 2: multiple declaration
+
+
+var_declaration: var_declaration type_specifier declaration_list SEMICOLON
+
+
+factor: CONST_INT
+2
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+simple_expression: term
+
+
+rel_expression: simple_expression
+
+
+logic_expression: rel_expression
+
+
+expression: logic_expression
+
+
+variable: ID LTHIRD expression RTHIRD
+a
+****error at line 3: array index out-of-bound
+
+
+factor: CONST_INT
+1
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+simple_expression: term
+
+
+rel_expression: simple_expression
+
+
+logic_expression: rel_expression
+
+
+expression: variable ASSIGNOP logic_expression
+4 --> <a,ID,{ -1, -1 } >
+6 --> <c,ID,-99999>
+12 --> <i,ID,-99999>
+13 --> <j,ID,-99999>
+
+
+expression_statement: expression SEMICOLON
+
+
+statement: expression_statement
+
+
+statements: statement
+
+
+variable: ID
+i
+
+
+factor: CONST_FLOAT
+2.300000
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+simple_expression: term
+
+
+rel_expression: simple_expression
+
+
+logic_expression: rel_expression
+
+
+expression: variable ASSIGNOP logic_expression
+****error at line 4: can't assign a float to an integer or a character
+
+
+expression_statement: expression SEMICOLON
+
+
+statement: expression_statement
+
+
+statements: statements statement
+
+
+variable: ID
+j
+
+
+factor: CONST_INT
+2
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+factor: CONST_FLOAT
+3.700000
+
+
+unary_expression: factor
+
+
+term: term MULOP unary_expression
+****error at line 5: invalid operands for modulo operation
+
+
+simple_expression: term
+
+
+rel_expression: simple_expression
+
+
+logic_expression: rel_expression
+
+
+expression: variable ASSIGNOP logic_expression
+
+
+expression_statement: expression SEMICOLON
+
+
+statement: expression_statement
+
+
+statements: statements statement
+
+
+variable: ID
+a
+****error at line 6: identifier to an array
+
+
+factor: CONST_INT
+4
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+simple_expression: term
+
+
+rel_expression: simple_expression
+
+
+logic_expression: rel_expression
+
+
+expression: variable ASSIGNOP logic_expression
+4 --> <a,ID,{ -1, -1 } >
+6 --> <c,ID,-99999>
+12 --> <i,ID,-99999>
+13 --> <j,ID,-99999>
+
+
+expression_statement: expression SEMICOLON
+
+
+statement: expression_statement
+
+
+statements: statements statement
+
+
+variable: ID
+b
+****error at line 7: Undeclared Identifier
+
+
+factor: CONST_INT
+8
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+simple_expression: term
+
+
+rel_expression: simple_expression
+
+
+logic_expression: rel_expression
+
+
+expression: variable ASSIGNOP logic_expression
+4 --> <a,ID,{ -1, -1 } >
+6 --> <c,ID,-99999>
+12 --> <i,ID,-99999>
+13 --> <j,ID,-99999>
+
+
+expression_statement: expression SEMICOLON
+
+
+statement: expression_statement
+
+
+statements: statements statement
+
+
+factor: CONST_INT
+0
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+simple_expression: term
+
+
+rel_expression: simple_expression
+
+
+logic_expression: rel_expression
+
+
+expression: logic_expression
+
+
+statement: RETURN expression SEMICOLON
+
+
+statements: statements statement
+
+
+compound_statement: LCURL var_declaration statements RCURL
+
+
+Program: INT MAIN LPAREN RPAREN compound_statement
+
+*******symbol table******
+4 --> <a,ID,{ -1, -1 } >
+6 --> <c,ID,-99999>
+12 --> <i,ID,-99999>
+13 --> <j,ID,-99999>
+
+Total Lines: 10
+
+Total Errors: 6

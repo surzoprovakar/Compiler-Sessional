@@ -1,0 +1,79 @@
+Inserted in scopetable# 1 at position 3,0
+Inserted in scopetable# 1 at position 2,0
+Inserted in scopetable# 1 at position 2,1
+scope table# 1
+0-->
+1-->
+2--><345:dfgt> <31:ert> 
+3--><23:asdf> 
+4-->
+5-->
+6-->
+
+Not found
+
+Inserted in scopetable# 1 at position 2,1
+Inserted in scopetable# 1 at position 3,0
+Deleted entry at 3,0 from current scope table
+Not found
+
+11 not found
+scope table# 1
+0-->
+1-->
+2--><345:dfgt> <31:ert> 
+3-->
+4-->
+5-->
+6-->
+
+New ScopeTable with id 2 created
+Inserted in scopetable# 2 at position 6,0
+Inserted in scopetable# 2 at position 0,0
+Inserted in scopetable# 2 at position 0,1
+scope table# 2
+0--><90:qwe> <11:cvb> 
+1-->
+2-->
+3-->
+4-->
+5-->
+6--><78:dfg> 
+
+scope table# 1
+0-->
+1-->
+2--><345:dfgt> <31:ert> 
+3-->
+4-->
+5-->
+6-->
+
+scope table# 2
+0--><90:qwe> <11:cvb> 
+1-->
+2-->
+3-->
+4-->
+5-->
+6--><78:dfg> 
+
+ScopeTable with id 2 removed
+scope table# 1
+0-->
+1-->
+2--><345:dfgt> <31:ert> 
+3-->
+4-->
+5-->
+6-->
+
+e# 1
+0-->
+1-->
+2--><345:dfgt> <31:ert> 
+3-->
+4-->
+5-->
+6-->
+

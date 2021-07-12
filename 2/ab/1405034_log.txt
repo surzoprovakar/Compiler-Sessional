@@ -1,0 +1,133 @@
+Line no. 2: TOKEN <ID> Lexeme include found
+Scopetable 1
+ --> 
+ --> < include ID >
+ --> 
+ --> 
+ --> 
+ --> 
+Line no. 2: TOKEN <RELOP> Lexeme < found
+Line no. 2: TOKEN <ID> Lexeme stdio found
+Scopetable 1
+ --> 
+ --> < include ID >
+ --> 
+ --> 
+ --> 
+ --> < stdio ID >
+Line no. 2: TOKEN <ID> Lexeme h found
+Scopetable 1
+ --> 
+ --> < include ID >< h ID >
+ --> 
+ --> 
+ --> 
+ --> < stdio ID >
+Line no. 2: TOKEN <RELOP> Lexeme > found
+Line no. 4: TOKEN <INT> Lexeme int found
+Line no. 4: TOKEN <ID> Lexeme main found
+Scopetable 1
+ --> 
+ --> < include ID >< h ID >
+ --> 
+ --> 
+ --> < main ID >
+ --> < stdio ID >
+Line no. 4: TOKEN <LPAREN> Lexeme ( found
+Line no. 4: TOKEN <RPAREN> Lexeme ) found
+Line no. 4: TOKEN <LCURL> Lexeme { found
+Line no. 5: TOKEN <INT> Lexeme int found
+Line no. 5: TOKEN <ID> Lexeme a found
+Scopetable 1
+ --> 
+ --> < include ID >< h ID >< a ID >
+ --> 
+ --> 
+ --> < main ID >
+ --> < stdio ID >
+Line no. 5: TOKEN <ASSIGNOP> Lexeme = found
+Line no. 5: TOKEN <CONST_INT> Lexeme 445 found
+Scopetable 1
+ --> 
+ --> < include ID >< h ID >< a ID >
+ --> 
+ --> < 445 CONST_INT >
+ --> < main ID >
+ --> < stdio ID >
+Line no. 5: TOKEN <SEMICOLON> Lexeme ; found
+Line no. 6: TOKEN <INT> Lexeme int found
+Line no. 6: TOKEN <ID> Lexeme b found
+Scopetable 1
+ --> 
+ --> < include ID >< h ID >< a ID >< b ID >
+ --> 
+ --> < 445 CONST_INT >
+ --> < main ID >
+ --> < stdio ID >
+Line no. 6: TOKEN <ASSIGNOP> Lexeme = found
+Line no. 6: TOKEN <CONST_INT> Lexeme 623445436 found
+Scopetable 1
+ --> 
+ --> < include ID >< h ID >< a ID >< b ID >
+ --> 
+ --> < 445 CONST_INT >< 623445436 CONST_INT >
+ --> < main ID >
+ --> < stdio ID >
+Line no. 6: TOKEN <SEMICOLON> Lexeme ; found
+Line no. 7: TOKEN <ID> Lexeme printf found
+Scopetable 1
+ --> < printf ID >
+ --> < include ID >< h ID >< a ID >< b ID >
+ --> 
+ --> < 445 CONST_INT >< 623445436 CONST_INT >
+ --> < main ID >
+ --> < stdio ID >
+Line no. 7: TOKEN <LPAREN> Lexeme ( found
+Line no. 7: Token <STRING> Lexeme "%d" found
+Line no. 7: TOKEN <COMMA> Lexeme , found
+Line no. 7: TOKEN <ID> Lexeme a found
+Scopetable 1
+ --> < printf ID >
+ --> < include ID >< h ID >< a ID >< b ID >< a ID >
+ --> 
+ --> < 445 CONST_INT >< 623445436 CONST_INT >
+ --> < main ID >
+ --> < stdio ID >
+Line no. 7: TOKEN <ADDOP> Lexeme + found
+Line no. 7: TOKEN <ID> Lexeme b found
+Scopetable 1
+ --> < printf ID >
+ --> < include ID >< h ID >< a ID >< b ID >< a ID >< b ID >
+ --> 
+ --> < 445 CONST_INT >< 623445436 CONST_INT >
+ --> < main ID >
+ --> < stdio ID >
+Line no. 7: TOKEN <RPAREN> Lexeme ) found
+Line no. 7: TOKEN <SEMICOLON> Lexeme ; found
+Line no. 8: Token <SINGLE COMMENT> Lexeme //sum of two integer found
+Line no. 8: TOKEN <ID> Lexeme printf found
+Scopetable 1
+ --> < printf ID >< printf ID >
+ --> < include ID >< h ID >< a ID >< b ID >< a ID >< b ID >
+ --> 
+ --> < 445 CONST_INT >< 623445436 CONST_INT >
+ --> < main ID >
+ --> < stdio ID >
+Line no. 8: TOKEN <LPAREN> Lexeme ( found
+Line no. 8: Token <STRING> Lexeme "hello" found
+Line no. 8: TOKEN <RPAREN> Lexeme ) found
+Line no. 8: TOKEN <SEMICOLON> Lexeme ; found
+Line no. 9: TOKEN <RETURN> Lexeme return found
+Line no. 9: TOKEN <CONST_INT> Lexeme 0 found
+Scopetable 1
+ --> < printf ID >< printf ID >
+ --> < include ID >< h ID >< a ID >< b ID >< a ID >< b ID >< 0 CONST_INT >
+ --> 
+ --> < 445 CONST_INT >< 623445436 CONST_INT >
+ --> < main ID >
+ --> < stdio ID >
+Line no. 9: TOKEN <SEMICOLON> Lexeme ; found
+Error at line no. 10 Unterminated String "djngj;
+Line no. 11: TOKEN <RCURL> Lexeme } found
+Total Line: 15
+Total Error: 1

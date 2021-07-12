@@ -1,0 +1,18 @@
+7
+I 23 asdf
+I 345 dfgt
+I 31 ert
+P A
+L 12
+L 31
+D 23
+D 11
+P A
+S
+I 78 dfg
+I 90 qwe
+I 11 cvb
+P A
+P C
+E 
+P A

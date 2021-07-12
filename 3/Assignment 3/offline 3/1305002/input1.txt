@@ -1,0 +1,10 @@
+char f(void);
+int k;
+int main(){
+	int a[2],c,i,j ; float d;
+	a[0]=1;
+	a[1]=5;
+	i= a[0]+a[1];
+	j= 2*3+(5%3 < 4 && 8) ;
+	return 0;
+}

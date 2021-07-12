@@ -1,0 +1,68 @@
+Inserted in scopetable#1 at position ( 2,0)
+Inserted in scopetable#1 at position ( 3,0)
+Inserted in scopetable#1 at position ( 2,1)
+scopetable#1
+0 -->
+1 -->
+2 --><23 : asdf > <31 : ert > 
+3 --><345 : dfgt > 
+4 -->
+5 -->
+6 -->
+Not found
+found in scopetable#1 at position (2,1)
+found in scopetable#1 at position (2,0)
+Deleted entry at position (2,0) from current ScopeTable
+Not found
+11 Not found
+scopetable#1
+0 -->
+1 -->
+2 --><31 : ert > 
+3 --><345 : dfgt > 
+4 -->
+5 -->
+6 -->
+New ScopeTable with id 2 created
+Inserted in scopetable#2 at position ( 2,0)
+Inserted in scopetable#2 at position ( 2,1)
+Inserted in scopetable#2 at position ( 2,2)
+scopetable#2
+0 -->
+1 -->
+2 --><78 : dfg > <90 : qwe > <11 : cvb > 
+3 -->
+4 -->
+5 -->
+6 -->
+scopetable#1
+0 -->
+1 -->
+2 --><31 : ert > 
+3 --><345 : dfgt > 
+4 -->
+5 -->
+6 -->
+scopetable#2
+0 -->
+1 -->
+2 --><78 : dfg > <90 : qwe > <11 : cvb > 
+3 -->
+4 -->
+5 -->
+6 -->
+ScopeTable with id 2 removed
+scopetable#1
+0 -->
+1 -->
+2 --><31 : ert > 
+3 --><345 : dfgt > 
+4 -->
+5 -->
+6 -->
+
+2 --><31 : ert > 
+3 --><345 : dfgt > 
+4 -->
+5 -->
+6 -->

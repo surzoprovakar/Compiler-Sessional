@@ -1,0 +1,1063 @@
+
+
+type_specifier: INT
+
+
+type_specifier: INT
+
+
+Parameter : type_specifier ID
+
+
+Parameter_List : Parameter
+
+
+type_specifier: CHAR
+
+
+Parameter : type_specifier ID LTHIRD CONST_INT RTHIRD
+
+
+Parameter_List : Parameter_List COMMA Parameter
+
+
+func_declaration : type_specifier ID LPAREN Parameter_List RPAREN SEMICOLON
+
+
+type_specifier: FLOAT
+
+
+global_dec_list : ID
+a
+
+
+global_dec_list : global_dec_list COMMA ID
+b
+
+
+global_var_declaration : type_specifier global_dec_list SEMICOLON
+
+
+type_specifier: INT
+
+
+global_dec_list : ID
+d
+
+
+global_dec_list : global_dec_list COMMA ID LTHIRD CONST_INT RTHIRD
+z
+
+
+global_var_declaration : global_var_declaration type_specifier global_dec_list SEMICOLON
+
+
+type_specifier: FLOAT
+
+
+declaration_list: ID
+x
+
+
+declaration_list: declaration_list COMMA ID
+z
+
+
+var_declaration: type_specifier declaration_list SEMICOLON
+
+
+type_specifier: CHAR
+
+
+declaration_list: ID LTHIRD CONST_INT RTHIRD
+p
+
+
+declaration_list: declaration_list COMMA ID
+q
+
+
+var_declaration: var_declaration type_specifier declaration_list SEMICOLON
+
+
+type_specifier: INT
+
+
+declaration_list: ID LTHIRD CONST_INT RTHIRD
+y
+
+
+declaration_list: declaration_list COMMA ID
+i
+
+
+declaration_list: declaration_list COMMA ID
+j
+
+
+declaration_list: declaration_list COMMA ID
+k
+
+
+var_declaration: var_declaration type_specifier declaration_list SEMICOLON
+
+
+factor: CONST_INT
+0
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+simple_expression: term
+
+
+rel_expression: simple_expression
+
+
+logic_expression: rel_expression
+
+
+expression: logic_expression
+
+
+variable: ID LTHIRD expression RTHIRD
+y
+
+
+factor: CONST_INT
+1
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+simple_expression: term
+
+
+rel_expression: simple_expression
+
+
+logic_expression: rel_expression
+
+
+expression: variable ASSIGNOP logic_expression
+12 --> <i,ID,-99999>
+13 --> <j,ID,-99999>
+14 --> <k,ID,-99999>
+19 --> <p,ID,{ 0, 0, 0, 0 } >
+20 --> <q,ID,0>
+27 --> <x,ID,-99999.000000>
+28 --> <y,ID,{ 1, -1 } >
+29 --> <z,ID,-99999.000000>
+
+
+expression_statement: expression SEMICOLON
+
+
+statement: expression_statement
+
+
+statements: statement
+
+
+variable: ID
+z
+
+
+factor: CONST_INT
+5
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+simple_expression: term
+
+
+rel_expression: simple_expression
+
+
+logic_expression: rel_expression
+
+
+expression: variable ASSIGNOP logic_expression
+12 --> <i,ID,-99999>
+13 --> <j,ID,-99999>
+14 --> <k,ID,-99999>
+19 --> <p,ID,{ 0, 0, 0, 0 } >
+20 --> <q,ID,0>
+27 --> <x,ID,-99999.000000>
+28 --> <y,ID,{ 1, -1 } >
+29 --> <z,ID,5.000000>
+
+
+expression_statement: expression SEMICOLON
+
+
+statement: expression_statement
+
+
+statements: statements statement
+
+
+variable: ID
+i
+
+
+factor: CONST_INT
+3
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+simple_expression: term
+
+
+rel_expression: simple_expression
+
+
+logic_expression: rel_expression
+
+
+expression: variable ASSIGNOP logic_expression
+12 --> <i,ID,3>
+13 --> <j,ID,-99999>
+14 --> <k,ID,-99999>
+19 --> <p,ID,{ 0, 0, 0, 0 } >
+20 --> <q,ID,0>
+27 --> <x,ID,-99999.000000>
+28 --> <y,ID,{ 1, -1 } >
+29 --> <z,ID,5.000000>
+
+
+expression_statement: expression SEMICOLON
+
+
+statement: expression_statement
+
+
+statements: statements statement
+
+
+variable: ID
+j
+
+
+factor: CONST_INT
+2
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+simple_expression: term
+
+
+rel_expression: simple_expression
+
+
+logic_expression: rel_expression
+
+
+expression: variable ASSIGNOP logic_expression
+12 --> <i,ID,3>
+13 --> <j,ID,2>
+14 --> <k,ID,-99999>
+19 --> <p,ID,{ 0, 0, 0, 0 } >
+20 --> <q,ID,0>
+27 --> <x,ID,-99999.000000>
+28 --> <y,ID,{ 1, -1 } >
+29 --> <z,ID,5.000000>
+
+
+expression_statement: expression SEMICOLON
+
+
+statement: expression_statement
+
+
+statements: statements statement
+
+
+variable: ID
+k
+
+
+variable: ID
+i
+
+
+factor: variable
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+variable: ID
+j
+
+
+factor: variable
+
+
+unary_expression: factor
+
+
+term: term MULOP unary_expression
+
+
+simple_expression: term
+
+
+rel_expression: simple_expression
+
+
+logic_expression: rel_expression
+
+
+expression: variable ASSIGNOP logic_expression
+12 --> <i,ID,3>
+13 --> <j,ID,2>
+14 --> <k,ID,1>
+19 --> <p,ID,{ 0, 0, 0, 0 } >
+20 --> <q,ID,0>
+27 --> <x,ID,-99999.000000>
+28 --> <y,ID,{ 1, -1 } >
+29 --> <z,ID,5.000000>
+
+
+expression_statement: expression SEMICOLON
+
+
+statement: expression_statement
+
+
+statements: statements statement
+
+
+factor: CONST_INT
+0
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+simple_expression: term
+
+
+rel_expression: simple_expression
+
+
+logic_expression: rel_expression
+
+
+expression: logic_expression
+
+
+variable: ID LTHIRD expression RTHIRD
+p
+
+
+factor: CONST_CHAR
+b
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+simple_expression: term
+
+
+rel_expression: simple_expression
+
+
+logic_expression: rel_expression
+
+
+expression: variable ASSIGNOP logic_expression
+12 --> <i,ID,3>
+13 --> <j,ID,2>
+14 --> <k,ID,1>
+19 --> <p,ID,{ b, 0, 0, 0 } >
+20 --> <q,ID,0>
+27 --> <x,ID,-99999.000000>
+28 --> <y,ID,{ 1, -1 } >
+29 --> <z,ID,5.000000>
+
+
+expression_statement: expression SEMICOLON
+
+
+statement: expression_statement
+
+
+statements: statements statement
+
+
+factor: CONST_INT
+1
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+simple_expression: term
+
+
+rel_expression: simple_expression
+
+
+logic_expression: rel_expression
+
+
+expression: logic_expression
+
+
+variable: ID LTHIRD expression RTHIRD
+p
+
+
+factor: CONST_CHAR
+u
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+simple_expression: term
+
+
+rel_expression: simple_expression
+
+
+logic_expression: rel_expression
+
+
+expression: variable ASSIGNOP logic_expression
+12 --> <i,ID,3>
+13 --> <j,ID,2>
+14 --> <k,ID,1>
+19 --> <p,ID,{ b, u, 0, 0 } >
+20 --> <q,ID,0>
+27 --> <x,ID,-99999.000000>
+28 --> <y,ID,{ 1, -1 } >
+29 --> <z,ID,5.000000>
+
+
+expression_statement: expression SEMICOLON
+
+
+statement: expression_statement
+
+
+statements: statements statement
+
+
+factor: CONST_INT
+2
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+simple_expression: term
+
+
+rel_expression: simple_expression
+
+
+logic_expression: rel_expression
+
+
+expression: logic_expression
+
+
+variable: ID LTHIRD expression RTHIRD
+p
+
+
+factor: CONST_CHAR
+e
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+simple_expression: term
+
+
+rel_expression: simple_expression
+
+
+logic_expression: rel_expression
+
+
+expression: variable ASSIGNOP logic_expression
+12 --> <i,ID,3>
+13 --> <j,ID,2>
+14 --> <k,ID,1>
+19 --> <p,ID,{ b, u, e, 0 } >
+20 --> <q,ID,0>
+27 --> <x,ID,-99999.000000>
+28 --> <y,ID,{ 1, -1 } >
+29 --> <z,ID,5.000000>
+
+
+expression_statement: expression SEMICOLON
+
+
+statement: expression_statement
+
+
+statements: statements statement
+
+
+factor: CONST_INT
+3
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+simple_expression: term
+
+
+rel_expression: simple_expression
+
+
+logic_expression: rel_expression
+
+
+expression: logic_expression
+
+
+variable: ID LTHIRD expression RTHIRD
+p
+
+
+factor: CONST_CHAR
+t
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+simple_expression: term
+
+
+rel_expression: simple_expression
+
+
+logic_expression: rel_expression
+
+
+expression: variable ASSIGNOP logic_expression
+12 --> <i,ID,3>
+13 --> <j,ID,2>
+14 --> <k,ID,1>
+19 --> <p,ID,{ b, u, e, t } >
+20 --> <q,ID,0>
+27 --> <x,ID,-99999.000000>
+28 --> <y,ID,{ 1, -1 } >
+29 --> <z,ID,5.000000>
+
+
+expression_statement: expression SEMICOLON
+
+
+statement: expression_statement
+
+
+statements: statements statement
+
+
+factor: CONST_INT
+0
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+simple_expression: term
+
+
+rel_expression: simple_expression
+
+
+logic_expression: rel_expression
+
+
+expression: logic_expression
+
+
+variable: ID LTHIRD expression RTHIRD
+y
+
+
+factor: variable
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+simple_expression: term
+
+
+factor: CONST_INT
+2
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+simple_expression: term
+
+
+rel_expression: simple_expression RELOP simple_expression
+
+
+logic_expression: rel_expression
+
+
+expression: logic_expression
+
+
+variable: ID
+x
+
+
+factor: CONST_FLOAT
+1.300000
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+simple_expression: term
+
+
+rel_expression: simple_expression
+
+
+logic_expression: rel_expression
+
+
+expression: variable ASSIGNOP logic_expression
+12 --> <i,ID,3>
+13 --> <j,ID,2>
+14 --> <k,ID,1>
+19 --> <p,ID,{ b, u, e, t } >
+20 --> <q,ID,0>
+27 --> <x,ID,1.300000>
+28 --> <y,ID,{ 1, -1 } >
+29 --> <z,ID,5.000000>
+
+
+expression_statement: expression SEMICOLON
+
+
+statement: expression_statement
+
+
+variable: ID
+x
+
+
+factor: CONST_FLOAT
+2.600000
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+simple_expression: term
+
+
+rel_expression: simple_expression
+
+
+logic_expression: rel_expression
+
+
+expression: variable ASSIGNOP logic_expression
+12 --> <i,ID,3>
+13 --> <j,ID,2>
+14 --> <k,ID,1>
+19 --> <p,ID,{ b, u, e, t } >
+20 --> <q,ID,0>
+27 --> <x,ID,2.600000>
+28 --> <y,ID,{ 1, -1 } >
+29 --> <z,ID,5.000000>
+
+
+expression_statement: expression SEMICOLON
+
+
+statement: expression_statement
+
+
+statement: IF LPAREN expression RPAREN statement ELSE statement
+
+
+statements: statements statement
+
+
+variable: ID
+z
+
+
+factor: variable
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+simple_expression: term
+
+
+factor: CONST_INT
+0
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+simple_expression: term
+
+
+rel_expression: simple_expression RELOP simple_expression
+
+
+logic_expression: rel_expression
+
+
+expression: logic_expression
+
+
+variable: ID
+x
+
+
+variable: ID
+x
+
+
+factor: variable
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+simple_expression: term
+
+
+factor: CONST_FLOAT
+0.500000
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+simple_expression: simple_expression ADDOP term
+
+
+rel_expression: simple_expression
+
+
+logic_expression: rel_expression
+
+
+expression: variable ASSIGNOP logic_expression
+12 --> <i,ID,3>
+13 --> <j,ID,2>
+14 --> <k,ID,1>
+19 --> <p,ID,{ b, u, e, t } >
+20 --> <q,ID,0>
+27 --> <x,ID,3.100000>
+28 --> <y,ID,{ 1, -1 } >
+29 --> <z,ID,5.000000>
+
+
+expression_statement: expression SEMICOLON
+
+
+statement: expression_statement
+
+
+statement: WHILE LPAREN expression RPAREN statement
+
+
+statements: statements statement
+
+
+variable: ID
+x
+
+
+factor: CONST_FLOAT
+2.500000
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+simple_expression: term
+
+
+rel_expression: simple_expression
+
+
+logic_expression: rel_expression
+
+
+expression: variable ASSIGNOP logic_expression
+12 --> <i,ID,3>
+13 --> <j,ID,2>
+14 --> <k,ID,1>
+19 --> <p,ID,{ b, u, e, t } >
+20 --> <q,ID,0>
+27 --> <x,ID,2.500000>
+28 --> <y,ID,{ 1, -1 } >
+29 --> <z,ID,5.000000>
+
+
+expression_statement: expression SEMICOLON
+
+
+statement: expression_statement
+
+
+statements: statements statement
+
+
+variable: ID
+x
+
+
+variable: ID
+x
+
+
+factor: variable
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+simple_expression: term
+
+
+factor: CONST_INT
+5
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+simple_expression: simple_expression ADDOP term
+
+
+rel_expression: simple_expression
+
+
+logic_expression: rel_expression
+
+
+expression: variable ASSIGNOP logic_expression
+12 --> <i,ID,3>
+13 --> <j,ID,2>
+14 --> <k,ID,1>
+19 --> <p,ID,{ b, u, e, t } >
+20 --> <q,ID,0>
+27 --> <x,ID,7.500000>
+28 --> <y,ID,{ 1, -1 } >
+29 --> <z,ID,5.000000>
+
+
+expression_statement: expression SEMICOLON
+
+
+statement: expression_statement
+
+
+statements: statements statement
+
+
+variable: ID
+x
+
+
+factor: variable
+
+
+factor: factor INCOP
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+simple_expression: term
+
+
+rel_expression: simple_expression
+
+
+logic_expression: rel_expression
+
+
+expression: logic_expression
+
+
+expression_statement: expression SEMICOLON
+
+
+statement: expression_statement
+
+
+statements: statements statement
+
+
+statement: PRINTLN LPAREN ID RPAREN SEMICOLON
+
+
+statements: statements statement
+
+
+factor: CONST_INT
+5
+
+
+unary_expression: factor
+
+
+term: unary_expression
+
+
+simple_expression: term
+
+
+rel_expression: simple_expression
+
+
+logic_expression: rel_expression
+
+
+expression: logic_expression
+
+
+statement: RETURN expression SEMICOLON
+
+
+statements: statements statement
+
+
+compound_statement: LCURL var_declaration statements RCURL
+
+
+Program: INT MAIN LPAREN RPAREN compound_statement
+
+
+Start : func_declaration global_var_declaration Program
+
+*******global symbol table******
+5 --> <z,ID,{ -1, -1 } >
+6 --> <a,ID,-99999.000000>
+7 --> <b,ID,-99999.000000>
+9 --> <d,ID,-99999>
+
+*******local symbol table******
+12 --> <i,ID,3>
+13 --> <j,ID,2>
+14 --> <k,ID,1>
+19 --> <p,ID,{ b, u, e, t } >
+20 --> <q,ID,0>
+27 --> <x,ID,8.500000>
+28 --> <y,ID,{ 1, -1 } >
+29 --> <z,ID,5.000000>
+
+Total Lines: 26
+
+Total Errors: 0
